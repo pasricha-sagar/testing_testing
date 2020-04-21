@@ -24,17 +24,14 @@ int comparo_fName(const void *pA, const void *pB)
 
 	// PROBLEM #3: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
-
-	// extract student records
 	stuDA_t s_A = *((stuDA_t*) pA);
 	stuDA_t s_B = *((stuDA_t*) pB);
-
-	// get student given names
 	char *f_A = s_A.data.fName;
 	char *f_B = s_B.data.fName;
 
 	return strcmp(f_A, f_B);
 }
+
 
 /*
  * (private) function provides comparison between two array elements for qsort(), based on gName
@@ -61,16 +58,14 @@ int comparo_grade(const void *pA, const void *pB)
 {
 	// PROBLEM #4: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
-	
-	// extract student records
 	stuDA_t st_A = *((stuDA_t*) pA);
 	stuDA_t st_B = *((stuDA_t*) pB);
+	float f_A = st_A.data.grade;
+	float f_B = st_B.data.grade;
 
-	// get student given names
-	float g_A = st_A.data.grade;
-	float g_B = st_B.data.grade;
+	return (f_A - f_B);
 
-	return (g_A - g_B);
+
 }
 
 /*
@@ -111,11 +106,11 @@ stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
 		break;
 	case gNamesort:
-		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gname);
-	break;
+	qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gName);
+		break;
 	case gradesort:
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_grade);
-	break;
+		break;
 	}
 	return pHEAD;
 }

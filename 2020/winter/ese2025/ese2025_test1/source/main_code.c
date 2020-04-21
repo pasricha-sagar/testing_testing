@@ -9,8 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "list_db.h"
-#include "dyn_arr.h"
+#include "list_db.c"
+#include "dyn_arr.c"
 
 /*****************************************************
  * PRIVATE FUNCTIONS

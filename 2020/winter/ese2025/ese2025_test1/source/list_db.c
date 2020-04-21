@@ -21,8 +21,8 @@ stuLL_t* createNodeLinkedList(void)
 {
 	// PROBLEM #1: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
-	stuLL_t* s= (stuLL_t*) malloc (sizeof (stuLL_t));
-	return s;
+	stuLL_t *s= (stuLL_t*) malloc (sizeof (stuLL_t));
+	 return s;
 }
 
 /*
@@ -96,8 +96,8 @@ stuLL_t* findLinkedList(stuLL_t *pHEAD, char *targetFamilyName)
 		{
 			// PROBLEM #2: complete the code for this function
 			//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
-			pW = pW -> pNext;
-			i =i+1;
+		pW = pW -> pNext;
+		i=i+1;
 		}
 		printf("\n");
 	}
