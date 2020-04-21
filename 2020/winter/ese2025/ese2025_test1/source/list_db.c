@@ -21,6 +21,8 @@ stuLL_t* createNodeLinkedList(void)
 {
 	// PROBLEM #1: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+	stuLL_t* s= (stuLL_t*) malloc (sizeof (stuLL_t));
+	return s;
 }
 
 /*
